@@ -1,0 +1,25 @@
+{
+    "postgres_database_cfg": [
+        {
+            "host": "localhost",
+            "port": "5432",
+            "database": "its_traffic",
+            "name": "main_db",
+            "user": "postgres_user",
+            "password": "postgres_password",
+            "enable_tls": null
+        }
+    ],
+    "server_cfg": {
+        "port": "8090",
+        "api_path": "api",
+        "grpc_port": "33733"
+    },
+    "jwt_conf": {
+        "pub_file": "./jwtRS512.key.pub",
+        "key_file": "./jwtRS512.key"
+    },
+    "use_cors": true,
+    "rbac_conf": "./rbac_with_deny_model.conf",
+    "docs_folder": "./docs"
+}

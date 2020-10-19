@@ -1,0 +1,12 @@
+main
+server_app
+*.xlsx
+*.dump
+docs/swagger.yaml
+docs/docs.go
+docs/swagger.json
+.vscode
+*.docker
+*.exe
+*.key.pub
+*.key
