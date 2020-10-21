@@ -3,10 +3,10 @@
         {
             "host": "localhost",
             "port": "5432",
-            "database": "its_traffic",
+            "database": "transport_accessibility",
             "name": "main_db",
-            "user": "postgres_user",
-            "password": "postgres_password",
+            "user": "keeper",
+            "password": "ta_keeper",
             "enable_tls": null
         }
     ],

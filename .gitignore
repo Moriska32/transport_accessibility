@@ -10,3 +10,7 @@ docs/swagger.json
 *.exe
 *.key.pub
 *.key
+cmd/front_end/fe_app
+cmd/front_end/main
+cmd/migrations/migrations_app
+cmd/migrations/main
