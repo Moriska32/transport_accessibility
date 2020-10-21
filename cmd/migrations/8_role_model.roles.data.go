@@ -11,11 +11,11 @@ func init() {
 		log.Println("Inserting data into role_model.roles")
 		_, err := db.Exec(`
 		INSERT INTO role_model.roles (id, role_name)
-		VALUES(1, 'admin');
+			VALUES(1, 'admin');
 		INSERT INTO role_model.roles (id, role_name)
-		VALUES(2, 'user');
+			VALUES(2, 'user');
 		INSERT INTO role_model.roles (id, role_name)
-		VALUES(3, 'developer');		
+			VALUES(3, 'developer');		
 		`)
 		return err
 	}, func(db migrations.DB) error {

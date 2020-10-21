@@ -11,9 +11,9 @@ func init() {
 		log.Println("Inserting data into role_model.policy_types")
 		_, err := db.Exec(`
 		INSERT INTO role_model.policy_types (id, policy_name)
-		VALUES(1, 'p');
+			VALUES(1, 'p');
 		INSERT INTO role_model.policy_types (id, policy_name)
-		VALUES(2, 'g');
+			VALUES(2, 'g');
 		`)
 		return err
 	}, func(db migrations.DB) error {

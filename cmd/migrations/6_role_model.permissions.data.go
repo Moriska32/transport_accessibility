@@ -11,9 +11,9 @@ func init() {
 		log.Println("Inserting data into role_model.permissions")
 		_, err := db.Exec(`
 		INSERT INTO role_model.permissions (id, perm_name)
-		VALUES(6, 'deny');
+			VALUES(1, 'deny');
 		INSERT INTO role_model.permissions (id, perm_name)
-		VALUES(7, 'allow');
+			VALUES(2, 'allow');
 		`)
 		return err
 	}, func(db migrations.DB) error {
