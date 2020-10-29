@@ -30,18 +30,18 @@ import (
 // @name token
 
 var (
-	confName = flag.String("conf", "", "Config file path")
+	confName = flag.String("conf", "", "configuration_examples/localhost.json")
 )
 
 func main() {
 
-	flag.Parse()
-	if *confName == "" {
-		flag.Usage()
-		return
-	}
+	// flag.Parse()
+	// if *confName == "" {
+	// 	flag.Usage()
+	// 	return
+	// }
 
-	appConfiguration, err := configuration.NewConfiguration(*confName)
+	appConfiguration, err := configuration.NewConfiguration("configuration_examples/localhost.json")
 	if err != nil {
 		fmt.Printf("Can't start server due the error: %s\n", err.Error())
 		return
