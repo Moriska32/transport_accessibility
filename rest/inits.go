@@ -36,8 +36,10 @@ func MainAPI(app *fiber.App, enviroment *env.Env, cfg *configuration.AppConfigur
 	{
 		mainAPI.Get("/test", MakeTest())
 		mainAPI.Post("/doauth", jwtMVPBus.LoginHandler)
-		mainAPI.Get("/refresh_token", jwtMVPBus.RefreshHandler)
-
+		login := mainAPI.Group("/login")
+		{
+			login.Get("/refresh_token", jwtMVPBus.RefreshHandler)
+		}
 		mainAPI.Get("/whoami", jwtMVPBus.MiddlewareFunc(), auth.GetMyRole(enviroment))
 	}
 
